@@ -519,6 +519,7 @@
 
     .order-counter .counter-current {
         font-size: 12px;
+        padding-bottom: 1px;
     }
 
     .order-item .counter-and-price {

@@ -34,6 +34,45 @@
     }
 }
 
+@media (hover:hover) and (pointer: fine) {
+
+    .products-from-search li:hover {
+        background-color: #f4890f;
+    }
+
+    .buy-button:hover {
+        background-color: #ffcf55;
+        scale: 105%;
+    }
+
+    .basket:hover {
+
+        background-color: #ffcf55;
+        width: 120px;
+        height: 55px;
+    }
+
+    .close-button:hover {
+        background-color: #a40a0a;
+    }
+
+    .order-button:hover {
+        background-color: #a40a0a;
+        color: #fff;
+    }
+
+    .product-item:hover {
+        border: 2px solid #f89f06;
+    }
+
+    .counter-control:hover {
+        background-color: #f4890f;
+        color: #fff;
+        border-radius: 4px;
+    }
+
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -309,13 +348,6 @@ input[type="search"]:focus {
     color: #000000;
 }
 
-.products-from-search li:hover {
-    background-color: #f4890f;
-}
-
-
-
-
 .container-basket {
     display: flex;
     justify-content: center;
@@ -339,13 +371,6 @@ input[type="search"]:focus {
     height: 50px;
     background-color: #ffaa0c;
     transition: all 0.2s;
-}
-
-.basket:hover {
-
-    background-color: #ffcf55;
-    width: 120px;
-    height: 55px;
 }
 
 .modal {
@@ -404,10 +429,6 @@ input[type="search"]:focus {
 
 .close-button-icon {
     width: 25px;
-}
-
-.close-button:hover {
-    background-color: #a40a0a;
 }
 
 .order-wrapper {
@@ -489,11 +510,6 @@ input[type="search"]:focus {
     border: none;
     border-radius: 9px;
     cursor: pointer;
-}
-
-.order-button:hover {
-    background-color: #a40a0a;
-    color: #fff;
 }
 
 .menu {
@@ -602,10 +618,6 @@ input[type="search"]:focus {
     transition: 0.1s;
 }
 
-.product-item:hover {
-    border: 2px solid #f89f06;
-}
-
 .product-img {
     width: 100%;
     border-top-left-radius: 13px;
@@ -688,11 +700,6 @@ input[type="search"]:focus {
     cursor: pointer;
 }
 
-.counter-control:hover {
-    background-color: #f4890f;
-    color: #fff;
-}
-
 .counter-current {
     display: flex;
     width: 100%;
@@ -717,11 +724,6 @@ input[type="search"]:focus {
     height: 40px;
     background-color: #ffaa0c;
     transition: all 0.2s;
-}
-
-.buy-button:hover {
-    background-color: #ffcf55;
-    scale: 105%;
 }
 
 .calculator {
