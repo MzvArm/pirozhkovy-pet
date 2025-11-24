@@ -20,6 +20,20 @@
     }
 }
 
+@keyframes target-animation-adaptive {
+    from {
+        scale: 100%;
+    }
+
+    50% {
+        scale: 105%;
+    }
+
+    to {
+        scale: 100%;
+    }
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -168,12 +182,14 @@ a {
 
 
 body {
-    /* свойство высоты можно будет позже убрать */
-    /* height: 200vw; */
     box-sizing: border-box;
-    font-family: "Comfortaa";
+    font-family: "Comfortaa", sans-serif;
     font-size: 15px;
     color: #fff;
+}
+
+p a {
+    white-space: nowrap;
 }
 
 div a img {
@@ -194,16 +210,10 @@ input[type="search"]:focus {
 
 
 .header {
+    background-color: brown;
     position: sticky;
     z-index: 100;
     top: 0;
-    height: 120px;
-    font-size: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    background-color: brown;
-    padding: 20px 20px 0;
 }
 
 .header-subscription {
@@ -211,8 +221,25 @@ input[type="search"]:focus {
     padding-left: 2px;
 }
 
+.header-container {
+    box-sizing: border-box;
+    width: clamp(360px, 100%, 1585px);
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    height: 140px;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: brown;
+    padding: 20px 20px 0;
+    justify-self: center;
+}
+
 
 .logo {
+    width: 80%;
     display: grid;
     grid-template-columns: 55px 1fr;
     grid-template-rows: 1fr 1fr;
@@ -234,7 +261,7 @@ input[type="search"]:focus {
     color: #000000;
     height: 30px;
     border-radius: 11px;
-    font-family: "Comfortaa";
+    font-family: "Comfortaa", sans-serif;
     padding-left: 8px;
     width: 390px;
     padding-right: 32px;
@@ -299,14 +326,14 @@ input[type="search"]:focus {
 
 .basket {
     position: relative;
-    left: 61px;
+    left: 64px;
     justify-self: center;
     color: rgb(127, 28, 28);
     border: 1px solid #f1ea7c;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: "Comfortaa";
+    font-family: "Comfortaa", sans-serif;
     border-radius: 20px;
     width: 115px;
     height: 50px;
@@ -455,7 +482,7 @@ input[type="search"]:focus {
 .order-button {
     line-height: 1.2;
     padding: 5px;
-    font-family: "Comfortaa";
+    font-family: "Comfortaa", sans-serif;
     font-size: 13px;
     background-color: #fff;
     color: #a40a0a;
@@ -479,14 +506,15 @@ input[type="search"]:focus {
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     font-weight: 500;
 }
 
 .menu-item {
-    padding-inline: 150px;
+    width: 25%;
+    padding-inline: 9.5%;
     border-right: 2px solid #000000;
+    white-space: nowrap;
 }
 
 .menu-item:last-child {
@@ -494,6 +522,7 @@ input[type="search"]:focus {
 }
 
 .menu-link {
+    justify-self: center;
     display: block;
     padding-block: 7px;
 }
@@ -517,19 +546,21 @@ input[type="search"]:focus {
 
 .products-wrapper {
     display: flex;
-    min-height: 40vw;
+    justify-content: center;
+    position: relative;
+    right: 3%;
 }
 
 .filter {
     position: sticky;
-    top: 145px;
+    top: 165px;
     color: #a40a0a;
-    width: 290px;
+    width: min(16.3vw, 290px);
     padding-inline: 5px;
     margin-inline: 20px;
     border: 1px solid #a40a0a;
     border-radius: 10px;
-    height: 300px;
+    height: 280px;
 }
 
 .filter-input {
@@ -538,6 +569,7 @@ input[type="search"]:focus {
     border: none;
     height: 16px;
     padding-left: 15px;
+    width: 40px;
 
 }
 
@@ -575,6 +607,7 @@ input[type="search"]:focus {
 }
 
 .product-img {
+    width: 100%;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
 }
@@ -650,7 +683,7 @@ input[type="search"]:focus {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
     cursor: pointer;
 }
@@ -678,7 +711,7 @@ input[type="search"]:focus {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: "Comfortaa";
+    font-family: "Comfortaa", sans-serif;
     border-radius: 20px;
     width: 105px;
     height: 40px;
@@ -688,8 +721,7 @@ input[type="search"]:focus {
 
 .buy-button:hover {
     background-color: #ffcf55;
-    width: 110px;
-    height: 45px;
+    scale: 105%;
 }
 
 .calculator {
@@ -714,7 +746,7 @@ input[type="search"]:focus {
     color: #000;
     padding: 25px 10px;
     justify-self: center;
-    width: 65%;
+    width: 780px;
     height: 85%;
     background-color: #ffbebe6b;
     border-radius: 20px;
@@ -751,14 +783,14 @@ input[type="search"]:focus {
     padding: 40px;
     display: flex;
     justify-content: center;
-    gap: 150px;
+    gap: 90px;
 }
 
 .calc-total-weight-wrapper,
 .calc-total-calories-wrapper {
     display: flex;
     justify-content: center;
-    width: 265px;
+    width: 255px;
     padding: 30px 10px;
     border-radius: 15px;
     background-color: #f4890f75;
@@ -767,6 +799,7 @@ input[type="search"]:focus {
 
 .total-weight-wrapper,
 .total-calories-wrapper {
+    font-size: 1.3em;
     padding-top: 20px;
     display: flex;
     justify-content: center;
@@ -790,8 +823,8 @@ input[type="search"]:focus {
 
 .about-us {
     padding: 40px 30px 20px;
-    height: 640px;
     scroll-margin-top: 100px;
+    justify-self: center;
 }
 
 .about-us-wrapper {
@@ -801,6 +834,7 @@ input[type="search"]:focus {
 
 .about-us-text {
     padding-top: 36px;
+    padding-right: 60px;
     line-height: 1.15;
     display: flex;
     color: #ad0000;
@@ -809,13 +843,14 @@ input[type="search"]:focus {
 }
 
 .pekar {
-    max-width: 500px;
+    width: min(500px, 31.55vw);
+    height: min(500px, 31.55vw);
 }
 
 .contacts {
     padding: 60px 30px 20px;
-    height: 600px;
     scroll-margin-top: 70px;
+    padding-bottom: 40px;
 }
 
 .contacts-title {
@@ -824,16 +859,16 @@ input[type="search"]:focus {
 
 .contacts-wrapper {
     display: flex;
-    justify-content: space-between;
+    gap: min(80px, 5.05vw);
+    justify-content: center;
 }
 
 .contacts-text {
-    padding-top: 36px;
+    padding-top: min(2.27vw, 36px);
     line-height: 1.25;
-    /* display: flex; */
     color: #ad0000;
-    max-width: 800px;
-    font-size: 18px;
+    max-width: 796px;
+    font-size: min(18px, 1.2vw);
 }
 
 .contacts-text a {
@@ -841,8 +876,15 @@ input[type="search"]:focus {
 }
 
 .footer {
+    background-color: brown;
+}
+
+.footer-container {
+    justify-self: center;
+    box-sizing: border-box;
+    width: min(100%, 1585px);
     padding: 30px;
-    height: 100px;
+    height: 160px;
     background-color: brown;
     display: grid;
     align-items: center;

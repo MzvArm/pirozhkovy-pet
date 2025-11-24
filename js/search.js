@@ -6,6 +6,7 @@ const productsFromSearch = document.querySelector(".products-from-search")
 const productSearch = document.querySelectorAll(".product-name")
 const searchArray = []
 
+
 // Добавляем в пустой массив имя и id товаров
 
 productSearch.forEach(item => {
@@ -57,10 +58,39 @@ searchInput.addEventListener("input", () => {
 
 })
 
-// Добавляем выключение окна поиска через клик вне окна
+// Добавляем перенос в инпут и выключение окна поиска через клик вне инпута
+
 
 document.addEventListener("click", (event) => {
-    if (!searchInput.contains(event.target) && !productsFromSearch.contains(event.target)) {
+
+    // Старая версия кода, оставил на всякий случай
+
+    // if (!searchInput.contains(event.target) && !productsFromSearch.contains(event.target)) {
+    //     toggleSearch.classList.remove("active-search")
+    // }
+
+    if (!searchInput.contains(event.target)) {
+
+        // Если выбираем продукт - значение переносится в инпут
+        if (productsFromSearch.contains(event.target)) {
+            searchInput.value = event.target.innerText
+        }
+
         toggleSearch.classList.remove("active-search")
     }
+
 })
+
+// Добавляем очистку хэша в URL при навигации
+
+window.addEventListener("hashchange", () => {
+    history.replaceState({}, "", location.pathname)
+})
+
+// Первоначальный вариант с таймером, оставил на всякий случай
+
+// window.addEventListener("hashchange", () => {
+//     setTimeout(() =>  {
+//     history.replaceState({}, "", location.pathname)}, 2000)
+// })
+

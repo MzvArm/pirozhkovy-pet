@@ -2,10 +2,11 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Пирожковый сайт</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="/media.css">
   <script src="/js/calculator.js" defer></script>
   <script src="/js/search.js" defer></script>
   <script src="/js/filter.js" defer></script>
@@ -17,674 +18,673 @@
 
 <body>
   <header class="header">
-    <div class="header-title">
-      <a href="/" class="logo">
-        <img src="./img/logo.png" alt="Пирожок" title="Пирожок" width="45" height="45" loading="lazy">
-        <h1 class="title" title="На главную">Пирожковый сайт</h1>
-        <p class="header-subscription" title="На главную">Домашняя выпечка каждый день!</p>
-      </a>
+    <div class="header-container">
+      <div class="header-title">
+        <a href="/" class="logo">
+          <img src="./img/logo.png" alt="Пирожок" title="Пирожок" width="45" height="45" loading="lazy">
+          <h1 class="title" title="На главную">Пирожковый сайт</h1>
+          <p class="header-subscription" title="На главную">Домашняя выпечка каждый день!</p>
+        </a>
 
-    </div>
-    <search role="search" class="search">
-      <form class="form">
-        <input type="search" placeholder="Найти пирожок" class="input">
-        <button class="button-input">
-          <svg width="20px" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
-              stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </form>
-      <ul class="products-from-search">
-      </ul>
-    </search>
-    <div class="container-basket">
-      <button class="basket" type="button" id="open-modal-button">
-        <svg height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 509.287 509.287" xml:space="preserve">
-          <circle style="fill:#FBD303;" cx="254.644" cy="254.644" r="254.644" />
-          <path style="fill:#D54232;" d="M447.237,135.629H62.05c-10.85,0-19.666,8.816-19.666,19.666v42.384
+      </div>
+      <search role="search" class="search">
+        <form class="form">
+          <input type="search" placeholder="Найти пирожок" class="input">
+          <button class="button-input">
+            <svg width="20px" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </form>
+        <ul class="products-from-search">
+        </ul>
+      </search>
+      <div class="container-basket">
+        <button class="basket" type="button" id="open-modal-button">
+          <svg height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 509.287 509.287" xml:space="preserve">
+            <circle style="fill:#FBD303;" cx="254.644" cy="254.644" r="254.644" />
+            <path style="fill:#D54232;" d="M447.237,135.629H62.05c-10.85,0-19.666,8.816-19.666,19.666v42.384
         	c0,10.85,8.816,19.666,19.666,19.666h385.187c10.85,0,19.666-8.816,19.666-19.666v-42.384
         	C466.564,144.445,458.087,135.629,447.237,135.629z" />
-          <path style="fill:#F0582F;" d="M74.596,217.007V383.83c0,16.954,13.902,30.856,30.856,30.856h298.384
+            <path style="fill:#F0582F;" d="M74.596,217.007V383.83c0,16.954,13.902,30.856,30.856,30.856h298.384
         	c16.954,0,30.856-13.902,30.856-30.856V217.007H74.596z" />
-          <g>
-            <path style="fill:#D54232;" d="M154.956,249.897c-14.919,0-27.126,12.207-27.126,27.126v77.648
+            <g>
+              <path style="fill:#D54232;" d="M154.956,249.897c-14.919,0-27.126,12.207-27.126,27.126v77.648
         		c0,14.919,12.207,27.126,27.126,27.126c14.919,0,27.126-12.207,27.126-27.126v-77.309
         		C182.421,262.103,170.215,249.897,154.956,249.897z" />
-            <path style="fill:#D54232;"
-              d="M254.644,249.897c-14.919,0-27.126,12.207-27.126,27.126v77.648
+              <path style="fill:#D54232;"
+                d="M254.644,249.897c-14.919,0-27.126,12.207-27.126,27.126v77.648
         		c0,14.919,12.207,27.126,27.126,27.126s27.126-12.207,27.126-27.126v-77.309C281.77,262.103,269.563,249.897,254.644,249.897z" />
-            <path style="fill:#D54232;" d="M354.331,249.897c-14.919,0-27.126,12.207-27.126,27.126v77.648
+              <path style="fill:#D54232;" d="M354.331,249.897c-14.919,0-27.126,12.207-27.126,27.126v77.648
         		c0,14.919,12.207,27.126,27.126,27.126c14.919,0,27.126-12.207,27.126-27.126v-77.309
         		C381.457,262.103,369.25,249.897,354.331,249.897z" />
-          </g>
-          <circle style="fill:#8E342D;" cx="254.644" cy="176.318" r="32.212" />
-          <path style="fill:#F1F3F7;" d="M326.188,63.068c-8.138-5.086-18.649-2.713-23.735,5.425l-62.728,99.687
+            </g>
+            <circle style="fill:#8E342D;" cx="254.644" cy="176.318" r="32.212" />
+            <path style="fill:#F1F3F7;" d="M326.188,63.068c-8.138-5.086-18.649-2.713-23.735,5.425l-62.728,99.687
         	c-5.086,8.138-2.713,18.649,5.425,23.735c8.138,5.086,18.649,2.713,23.735-5.425l62.389-99.687
         	C336.36,78.665,333.987,68.154,326.188,63.068z" />
-        </svg>
-        Корзина</button>
-    </div>
-    <div class="modal" id="modal">
-      <div class="modal-box">
-        <header class="header-modal-box">
-          <h2>Ваш заказ</h2>
-          <button class="close-button" id="close-modal-button" type="button"> <img src="/img/close-btn.svg"
-              class="close-button-icon" alt="Закрыть" title="Закрыть">
-          </button>
-        </header>
-        <div class="order-wrapper">
-          <div class="basket-empty">Корзина пуста((</div>
-        </div>
-        <footer class="footer-modal-box">
-          <div>Итого:</div>
-          <div class="total-sum-wrapper">
-            <div class="total-sum">0</div>
-            <div>Р</div>
-          </div>
-          <button class="order-button">Перейти к оплате <br>(не перейдёшь!)
-          </button>
-        </footer>
+          </svg>
+          Корзина</button>
       </div>
+      <div class="modal" id="modal">
+        <div class="modal-box">
+          <header class="header-modal-box">
+            <h2>Ваш заказ</h2>
+            <button class="close-button" id="close-modal-button" type="button"> <img src="/img/close-btn.svg"
+                class="close-button-icon" alt="Закрыть" title="Закрыть">
+            </button>
+          </header>
+          <div class="order-wrapper">
+            <div class="basket-empty">Корзина пуста((</div>
+          </div>
+          <footer class="footer-modal-box">
+            <div>Итого:</div>
+            <div class="total-sum-wrapper">
+              <div class="total-sum">0</div>
+              <div>Р</div>
+            </div>
+            <button class="order-button">Перейти к оплате <br>(не перейдёшь!)
+            </button>
+          </footer>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="#products" class="menu-link">Продукция</a></li>
+          <li class="menu-item"><a href="#calculator" class="menu-link">Калькулятор</a></li>
+          <li class="menu-item"><a href="#about-us" class="menu-link">О нас</a></li>
+          <li class=" menu-item"><a href="#contacts" class="menu-link">Контакты</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav class="menu">
-      <ul class="menu-list">
-        <li class="menu-item"><a href="#products" class="menu-link">Продукция</a></li>
-        <li class="menu-item"><a href="#calculator" class="menu-link">Калькулятор</a></li>
-        <li class="menu-item"><a href="#about-us" class="menu-link"">О нас</a></li>
-        <li class=" menu-item"><a href="#contacts" class="menu-link"">Контакты</a></li>
-      </ul>
-    </nav>
-
   </header>
   <main class=" content">
-              <section class="products" id="products">
-                <h2 class="section-title" ">Наша выпечка</h2>
+    <section class="products" id="products">
+      <h2 class="section-title">Наша выпечка</h2>
       <div class=" products-wrapper">
-                  <aside class="filter">
-                    <h3 class="title">Фильтр товаров</h3>
-                    <form>
-                      <div class="filter-cost">
-                        <p class="filter-name">Цена, Р</p>
-                        <div class="filter-cost-wrapper">
-                          <label for="filter-cost-min">От</label>
-                          <input class="filter-input" type="number" data-input id="filter-cost-min" value="70" min="70"
-                            max="350">
-                          <label for="filter-cost-max">До</label>
-                          <input class="filter-input" type="number" data-input id="filter-cost-max" value="350" min="70"
-                            max="350">
-                        </div>
-                        <div class="filter-calories">
-                          <p class="filter-name">Калорийность, Ккал</p>
-                          <div class="filter-calories-wrapper">
-                            <label for="filter-calories-min">От</label>
-                            <input class="filter-input" type="number" data-input id="filter-calories-min" value="150"
-                              min="150" max="500">
-                            <label for="filter-calories-max">До</label>
-                            <input class="filter-input" type="number" data-input id="filter-calories-max" value="500"
-                              min="150" max="500">
+        <aside class="filter">
+          <h3 class="title">Фильтр товаров</h3>
+          <form class="filter-form">
 
-                          </div>
+            <div class="filter-cost-wrapper">
+              <p class="filter-name">Цена, Р</p>
+              <label for="filter-cost-min">От</label>
+              <input class="filter-input" type="number" data-input id="filter-cost-min" value="70" min="70" max="350">
+              <label for="filter-cost-max">До</label>
+              <input class="filter-input" type="number" data-input id="filter-cost-max" value="350" min="70" max="350">
+            </div>
+            <div class="filter-calories-wrapper">
+              <p class="filter-name">Калорийность, Ккал</p>
+              <label for="filter-calories-min" class="filter-calories-min">От</label>
+              <input class="filter-input" type="number" data-input id="filter-calories-min" value="150" min="150"
+                max="500">
+              <label for="filter-calories-max" class="filter-calories-max">До</label>
+              <input class="filter-input" type="number" data-input id="filter-calories-max" value="500" min="150"
+                max="500">
+            </div>
 
-                          <p class="filter-name">Вид пирожка</p>
-                          <div class="checkbox-wrapper">
-                            <input type="checkbox" class="savory-type" data-input id="savory" checked>
-                            <label for="savory">Солёный</label>
-                            <input type="checkbox" class="sweet-type" data-input id="sweet" checked>
-                            <label for="sweet">Сладкий</label>
-                          </div>
-
-                    </form>
-
-                    </div>
-
-                  </aside>
-
-                  <div class="product-items-wrapper">
-
-                    <article class="product-item savory" data-id="01">
-                      <img src="./img/pirozhok-s-kartoshkoy.png" height="150" alt="Пирожок с картошкой"
-                        title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="01">Пирожок с картошкой</h3>
-                      <div class="product-description">Отварной картофель <br> с кусочками жаренного лука</div>
-
-                      <div class="product-calories">
-                        200 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          150г
-                        </div>
-                        <div class="product-price">
-                          90р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item savory" data-id="02">
-                      <img src="./img/s-kuricey-i-syrom.png" height="150" alt="Пирожок с курицей и сыром"
-                        title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="02">Пирожок с курицей и сыром</h3>
-                      <div class="product-description">Курица с сыром <br>и кусочками лука</div>
-
-                      <div class="product-calories">
-                        270 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          200г
-                        </div>
-                        <div class="product-price">
-                          120р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item savory" data-id="03">
-                      <img src="./img/s-kvashenoy-kapustoy.png" height="150" width="100%"
-                        alt="Пирожок с квашеной капустой" title="Пирожок выглядящий как булочка" loading="lazy"
-                        class="product-img">
-                      <h3 class="product-name" id="03">Пирожок с квашеной капустой</h3>
-                      <div class="product-description">Квашеная капуста <br> с укропом</div>
-
-                      <div class="product-calories">
-                        150 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          130г
-                        </div>
-                        <div class="product-price">
-                          70р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item savory" data-id="04">
-                      <img src="./img/s-tushenoy-kapustoy.png" height="150" width="100%"
-                        alt="Пирожище с тущёной капустой" title="Пирожище" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="04">Пирожище с тушёной капустой</h3>
-                      <div class="product-description">Тушёная капуста</div>
-
-                      <div class="product-calories">
-                        250 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          250г
-                        </div>
-                        <div class="product-price">
-                          120р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item savory" data-id="05">
-                      <img src="./img/s-yaycom-i-lukom.png" height="150" width="100%" alt="Пирожище с яйцом и луком"
-                        title="Пирожище" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="05">Пирожище с яйцом и луком</h3>
-                      <div class="product-description">Варёные яйца с луком</div>
-
-                      <div class="product-calories">
-                        300 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          250г
-                        </div>
-                        <div class="product-price">
-                          120р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item savory" data-id="06">
-                      <img src="./img/syr-i-zelen.jpg" height="150" width="100%" alt="Пирожок с сыром и зеленью"
-                        title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="06">Пирожок с сыром и зеленью</h3>
-                      <div class="product-description">Сыр и микс зелени</div>
-
-                      <div class="product-calories">
-                        300 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          250г
-                        </div>
-                        <div class="product-price">
-                          130р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item sweet" data-id="07">
-                      <img src="./img/s-abrikosom.jpg" height="150" width="100%" alt="Пирожок с абрикосом"
-                        title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="07">Пирожок с абрикосом</h3>
-                      <div class="product-description">Абрикосовое варенье</div>
-
-                      <div class="product-calories">
-                        200 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          150г
-                        </div>
-                        <div class="product-price">
-                          90р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item sweet" data-id="08">
-                      <img src="./img/s-vishney.jpg" height="150" width="100%" alt="Пирожок с вишней"
-                        title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="08">Пирожок с вишней</h3>
-                      <div class="product-description">Вишнёвое варенье</div>
-
-                      <div class="product-calories">
-                        200 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          150г
-                        </div>
-                        <div class="product-price">
-                          90р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item sweet" data-id="09">
-                      <img src="./img/nutella.jpg" height="150" width="100%" alt="Пирожок с нутеллой"
-                        title="Скорее чебурек" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="09">Пирожок с нутеллой</h3>
-                      <div class="product-description">Шоколадная паста нутелла</div>
-
-                      <div class="product-calories">
-                        270 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          200г
-                        </div>
-                        <div class="product-price">
-                          130р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item sweet" data-id="10">
-                      <img src="./img/mango-marakuya.jpg" height="150" width="100%" alt="Пирожок с манго и маракуйей"
-                        title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="10">Пирожок с манго и маракуйей</h3>
-                      <div class="product-description">Варенье манго и маракуйи</div>
-
-                      <div class="product-calories">
-                        230 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          180г
-                        </div>
-                        <div class="product-price">
-                          120р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item sweet" data-id="11">
-                      <img src="./img/krem-i-korica.jpg" height="150" width="100%" alt="Булочка с кремом и корицей"
-                        title="Булочка как булочка" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="11">Булочка с кремом и корицей</h3>
-                      <div class="product-description">Крем и корица</div>
-
-                      <div class="product-calories">
-                        350 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          250г
-                        </div>
-                        <div class="product-price">
-                          140р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item sweet" data-id="12">
-                      <img src="./img/s-tvorogom.png" height="150" width="100%" alt="Булочка с творогом"
-                        title="Булочка как булочка" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="12">Булочка с творогом</h3>
-                      <div class="product-description">Творог</div>
-
-                      <div class="product-calories">
-                        350 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          250г
-                        </div>
-                        <div class="product-price">
-                          150р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item savory" data-id="13">
-                      <img src="./img/s-pelmenyami.png" height="150" width="100%" alt="Пирог с пельменями"
-                        title="Он вам не пирожок" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="13">Пирог с пельменями</h3>
-                      <div class="product-description">Варёные пельмени</div>
-
-                      <div class="product-calories">
-                        500 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          450г
-                        </div>
-                        <div class="product-price">
-                          350р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item savory" data-id="14">
-                      <img src="./img/kartoshka-syr.jpg" height="150" width="100%"
-                        alt="Осетинский пирог с картошкой и сыром" title="Осетинский пирог" loading="lazy"
-                        class="product-img">
-                      <h3 class="product-name" id="14">Осетинский пирог с картошкой и сыром</h3>
-                      <div class="product-description">Отварной картофель <br> с сыром</div>
-
-                      <div class="product-calories">
-                        500 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          450г
-                        </div>
-                        <div class="product-price">
-                          350р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item savory" data-id="15">
-                      <img src="./img/myaso-zelen.jpg" height="150" width="100%"
-                        alt="Осетинский пирог с мясом и зеленью" title="Осетинский пирог" loading="lazy"
-                        class="product-img">
-                      <h3 class="product-name" id="15">Осетинский пирог с мясом и зеленью</h3>
-                      <div class="product-description">Свино-говяжий фарш <br> и микс зелени</div>
-
-                      <div class="product-calories">
-                        500 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          450г
-                        </div>
-                        <div class="product-price">
-                          350р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-                    <article class="product-item sweet" data-id="16">
-                      <img src="./img/s-yablokom.jpg" height="150" width="100%" alt="Пирог с яблоками и корицей"
-                        title="Пирог с яблоками и корицей" loading="lazy" class="product-img">
-                      <h3 class="product-name" id="16">Пирог с яблоками и корицей</h3>
-                      <div class="product-description">Яблоки и корица (неожиданно)</div>
-
-                      <div class="product-calories">
-                        500 ккал
-                      </div>
-                      <div class="product-info-wrapper">
-                        <div class="product-weight">
-                          450г
-                        </div>
-                        <div class="product-price">
-                          350р
-                        </div>
-                      </div>
-                      <div class="counter">
-                        <div class="counter-control" data-action="minus">-</div>
-                        <div class="counter-current" data-counter>1</div>
-                        <div class="counter-control" data-action="plus">+</div>
-                      </div>
-                      <button class="buy-button" data-in-basket>
-                        В корзину
-                      </button>
-                    </article>
-
-                  </div>
-                  </div>
-              </section>
-
-              <section class="calculator" id="calculator">
-                <h2 class="section-title">Хлебобулочный калькулятор</h2>
-                <p class="calculator-description">
-                  Здесь можно рассчитать калорийность и вес выбранных хлебобулок
-                </p>
-                <div class="calculator-wrapper">
-                  <div class="calc-items">
-                  </div>
-                  <div class="calc-total">
-                    <div class="calc-total-weight-wrapper">
-                      <div class="calc-total-weight">
-                        Общий вес:
-                        <div class="total-weight-wrapper">
-                          <div class="total-weight">0</div>
-                          <div class="">г</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="calc-total-calories-wrapper">
-                      <div class="calc-total-calories">
-                        Общая калорийность:
-                        <div class="total-calories-wrapper">
-
-                          <div class="total-calories">0</div>
-                          <div class=""> ккал</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="about-us" id="about-us">
-                <h2 class="section-title">
-                  О нас
-                </h2>
-                <div class="about-us-wrapper">
-
-                  <div class="text-wrapper"></div>
-                  <p class="about-us-text">
-                    Данный сайт является pet-проектом Морозова Артёма. Любой товар, характеристики, а также контактные
-                    данные,
-                    представленные на сайте, являются вымышленными и не соответствуют реальности.<br> <br>
-                    А здесь я просто заполняю текст, т.к. в целом всё уже сказал. Можно было бы, конечно использовать
-                    grid-сетку для этого раздела, но мне захотелось оставить flex-контейнер.
-                    Какой-то смысловой нагрузки тут уже не планируется, так что я бы, на Вашем месте, пропустил эту
-                    часть. <br> <br>
-                    Казалось бы: а почему не использовать текст-рыбу? Да, вот как-то без души это всё, а мы же тут за
-                    идею, так что нам такое не подходит. <br> <br>
-                    А вот ещё момент: женщина справа-то сгенерированная! Как и все изображения на этой странице.
-                    С идеей макета мне тож чуть помог <br> ИИ из Figma, хоть и остальное пришлось самому додумывать.
-                    <br>
-                    <br>
-                    Знали бы вы сколько уже было тэгов "br" потрачено... Ну ничего, мы уже на финишной прямой. Ещё одно
-                    предложение и можно заканчивать. Вот и оно, последнее предложение, спасибо, что прочитали до конца))
+            <div class="checkbox-wrapper">
+              <p class="filter-name">Вид пирожка</p>
+              <input type="checkbox" class="savory-type" data-input id="savory" checked>
+              <label for="savory">Солёный</label>
+              <input type="checkbox" class="sweet-type" data-input id="sweet" checked>
+              <label for="sweet">Сладкий</label>
+            </div>
+          </form>
 
 
-                  </p>
-                  <img src="/img/pekar.jfif" alt="Ненастоящая женщина" class="pekar" title="Сгенерированная женщина"
-                    loading="lazy">
-                </div>
-              </section>
 
-              <section class="contacts" id="contacts">
-                <h2 class="section-title contacts-title">Контакты</h2>
-                <div class="contacts-wrapper">
-                  <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A2c562434b89716c63431ddd4c2b9f01e7aa2721a3ebe0d939b475ffa1a828fc5&amp;source=constructor"
-                    width="650" height="400" frameborder="0"></iframe>
-                  <div class="contacts-text-wrapper">
-                    <p class="contacts-text">Теоритически мы распологаемся по адресу <adress> г. Краснодар, х. Ленина,
-                        ул. Булочная </adress>
-                      (да, из-за улицы). Забрать свой заказ по этому адресу можно в течении часа (или позже) после его
-                      оформления на данном
-                      сайте
-                      или по указанному телефону <a href="tel:+70000000000">+7 (000) 000-00-00</a>. Пекарня работает
-                      каждый день <time datetime="08:00/22:00">с 8:00 до 22:00</time>, приезжайте в
-                      любое
-                      удобное для Вас время!</p>
-                    <p class="contacts-text"> На территории пекарни также располагается небольшая столовая и магазин -
-                      Вы всегда можете
-                      перекусить тёпленькими вкуснейшими пирожками у нас в гостях.
-                      И не забывайте обязательно заходить к нам в вечернее время, так как каждый день после <time
-                        datetime="20:00/22:00">20:00 часов</time>
-                      действует скидка на оставшиеся пирожки 30%! </p>
-                    <p class="contacts-text">С нетерпением ждём Вас в нашей "Пирожковой"!</p>
-                  </div>
-                </div>
-              </section>
-              </main>
-              <footer class="footer">
-                <adress> г. Краснодар, х. Ленина, ул. Булочная </adress>
-                <a href="mailto:pirozhki.na.bulochnoy@mail.ru">pirozhki.na.bulochnoy@mail.ru</a>
-                <p>Ежедневно <time datetime="08:00/22:00">с 8:00 до 22:00</time></p>
-                <div class="messengers">
-                  <a href="https://t.me/youraccountname" target="_blank">
-                    <img src="./img/telegram-icon.svg" alt="Telegram" class="messenger">
-                  </a>
+        </aside>
+
+        <div class="product-items-wrapper">
+
+          <article class="product-item savory" data-id="01">
+            <img src="./img/pirozhok-s-kartoshkoy.png" height="150" alt="Пирожок с картошкой"
+              title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
+            <h3 class="product-name" id="01">Пирожок с картошкой</h3>
+            <div class="product-description">Отварной картофель <br> с кусочками жаренного лука</div>
+
+            <div class="product-calories">
+              200 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                150г
+              </div>
+              <div class="product-price">
+                90р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item savory" data-id="02">
+            <img src="./img/s-kuricey-i-syrom.png" height="150" alt="Пирожок с курицей и сыром"
+              title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
+            <h3 class="product-name" id="02">Пирожок с курицей и сыром</h3>
+            <div class="product-description">Курица с сыром <br>и кусочками лука</div>
+
+            <div class="product-calories">
+              270 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                200г
+              </div>
+              <div class="product-price">
+                120р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item savory" data-id="03">
+            <img src="./img/s-kvashenoy-kapustoy.png" height="150" alt="Пирожок с квашеной капустой"
+              title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
+            <h3 class="product-name" id="03">Пирожок с квашеной капустой</h3>
+            <div class="product-description">Квашеная капуста <br> с укропом</div>
+
+            <div class="product-calories">
+              150 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                130г
+              </div>
+              <div class="product-price">
+                70р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item savory" data-id="04">
+            <img src="./img/s-tushenoy-kapustoy.png" height="150" alt="Пирожище с тущёной капустой" title="Пирожище"
+              loading="lazy" class="product-img">
+            <h3 class="product-name" id="04">Пирожище с тушёной капустой</h3>
+            <div class="product-description">Тушёная капуста</div>
+
+            <div class="product-calories">
+              250 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                250г
+              </div>
+              <div class="product-price">
+                120р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item savory" data-id="05">
+            <img src="./img/s-yaycom-i-lukom.png" height="150" alt="Пирожище с яйцом и луком" title="Пирожище"
+              loading="lazy" class="product-img">
+            <h3 class="product-name" id="05">Пирожище с яйцом и луком</h3>
+            <div class="product-description">Варёные яйца с луком</div>
+
+            <div class="product-calories">
+              300 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                250г
+              </div>
+              <div class="product-price">
+                120р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item savory" data-id="06">
+            <img src="./img/syr-i-zelen.jpg" height="150" alt="Пирожок с сыром и зеленью"
+              title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
+            <h3 class="product-name" id="06">Пирожок с сыром и зеленью</h3>
+            <div class="product-description">Сыр и микс зелени</div>
+
+            <div class="product-calories">
+              300 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                250г
+              </div>
+              <div class="product-price">
+                130р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item sweet" data-id="07">
+            <img src="./img/s-abrikosom.jpg" height="150" alt="Пирожок с абрикосом"
+              title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
+            <h3 class="product-name" id="07">Пирожок с абрикосом</h3>
+            <div class="product-description">Абрикосовое варенье</div>
+
+            <div class="product-calories">
+              200 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                150г
+              </div>
+              <div class="product-price">
+                90р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item sweet" data-id="08">
+            <img src="./img/s-vishney.jpg" height="150" alt="Пирожок с вишней" title="Пирожок выглядящий как булочка"
+              loading="lazy" class="product-img">
+            <h3 class="product-name" id="08">Пирожок с вишней</h3>
+            <div class="product-description">Вишнёвое варенье</div>
+
+            <div class="product-calories">
+              200 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                150г
+              </div>
+              <div class="product-price">
+                90р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item sweet" data-id="09">
+            <img src="./img/nutella.jpg" height="150" alt="Пирожок с нутеллой" title="Скорее чебурек" loading="lazy"
+              class="product-img">
+            <h3 class="product-name" id="09">Пирожок с нутеллой</h3>
+            <div class="product-description">Шоколадная паста нутелла</div>
+
+            <div class="product-calories">
+              270 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                200г
+              </div>
+              <div class="product-price">
+                130р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item sweet" data-id="10">
+            <img src="./img/mango-marakuya.jpg" height="150" alt="Пирожок с манго и маракуйей"
+              title="Пирожок выглядящий как булочка" loading="lazy" class="product-img">
+            <h3 class="product-name" id="10">Пирожок с манго и маракуйей</h3>
+            <div class="product-description">Варенье манго и маракуйи</div>
+
+            <div class="product-calories">
+              230 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                180г
+              </div>
+              <div class="product-price">
+                120р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item sweet" data-id="11">
+            <img src="./img/krem-i-korica.jpg" height="150" alt="Булочка с кремом и корицей" title="Булочка как булочка"
+              loading="lazy" class="product-img">
+            <h3 class="product-name" id="11">Булочка с кремом и корицей</h3>
+            <div class="product-description">Крем и корица</div>
+
+            <div class="product-calories">
+              350 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                250г
+              </div>
+              <div class="product-price">
+                140р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item sweet" data-id="12">
+            <img src="./img/s-tvorogom.png" height="150" alt="Булочка с творогом" title="Булочка как булочка"
+              loading="lazy" class="product-img">
+            <h3 class="product-name" id="12">Булочка с творогом</h3>
+            <div class="product-description">Творог</div>
+
+            <div class="product-calories">
+              350 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                250г
+              </div>
+              <div class="product-price">
+                150р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item savory" data-id="13">
+            <img src="./img/s-pelmenyami.png" height="150" alt="Пирог с пельменями" title="Он вам не пирожок"
+              loading="lazy" class="product-img">
+            <h3 class="product-name" id="13">Пирог с пельменями</h3>
+            <div class="product-description">Варёные пельмени</div>
+
+            <div class="product-calories">
+              500 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                450г
+              </div>
+              <div class="product-price">
+                350р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item savory" data-id="14">
+            <img src="./img/kartoshka-syr.jpg" height="150" alt="Осетинский пирог с картошкой и сыром"
+              title="Осетинский пирог" loading="lazy" class="product-img">
+            <h3 class="product-name" id="14">Осетинский пирог с картошкой и сыром</h3>
+            <div class="product-description">Отварной картофель <br> с сыром</div>
+
+            <div class="product-calories">
+              500 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                450г
+              </div>
+              <div class="product-price">
+                350р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item savory" data-id="15">
+            <img src="./img/myaso-zelen.jpg" height="150" alt="Осетинский пирог с мясом и зеленью"
+              title="Осетинский пирог" loading="lazy" class="product-img">
+            <h3 class="product-name" id="15">Осетинский пирог с мясом и зеленью</h3>
+            <div class="product-description">Свино-говяжий фарш <br> и микс зелени</div>
+
+            <div class="product-calories">
+              500 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                450г
+              </div>
+              <div class="product-price">
+                350р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+          <article class="product-item sweet" data-id="16">
+            <img src="./img/s-yablokom.jpg" height="150" alt="Пирог с яблоками и корицей"
+              title="Пирог с яблоками и корицей" loading="lazy" class="product-img">
+            <h3 class="product-name" id="16">Пирог с яблоками и корицей</h3>
+            <div class="product-description">Яблоки и корица (неожиданно)</div>
+
+            <div class="product-calories">
+              500 ккал
+            </div>
+            <div class="product-info-wrapper">
+              <div class="product-weight">
+                450г
+              </div>
+              <div class="product-price">
+                350р
+              </div>
+            </div>
+            <div class="counter">
+              <div class="counter-control" data-action="minus">-</div>
+              <div class="counter-current" data-counter>1</div>
+              <div class="counter-control" data-action="plus">+</div>
+            </div>
+            <button class="buy-button" data-in-basket>
+              В корзину
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="calculator" id="calculator">
+      <h2 class="section-title">Хлебобулочный калькулятор</h2>
+      <p class="calculator-description">
+        Здесь можно рассчитать калорийность и вес выбранных хлебобулок
+      </p>
+      <div class="calculator-wrapper">
+        <div class="calc-items">
+        </div>
+        <div class="calc-total">
+          <div class="calc-total-weight-wrapper">
+            <div class="calc-total-weight">
+              Общий вес:
+              <div class="total-weight-wrapper">
+                <div class="total-weight">0</div>
+                <div class="">г</div>
+              </div>
+            </div>
+          </div>
+          <div class="calc-total-calories-wrapper">
+            <div class="calc-total-calories">
+              Общая калорийность:
+              <div class="total-calories-wrapper">
+
+                <div class="total-calories">0</div>
+                <div class=""> ккал</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+      <h2 class="section-title">
+        О нас
+      </h2>
+      <div class="about-us-wrapper">
+
+        <p class="about-us-text">
+          Данный сайт является pet-проектом Морозова Артёма. Любой товар, характеристики, а также контактные
+          данные,
+          представленные на сайте, являются вымышленными и не соответствуют реальности.<br> <br>
+          А здесь я просто заполняю текст, т.к. в целом всё уже сказал. Можно было бы, конечно использовать
+          grid-сетку для этого раздела, но мне захотелось оставить flex-контейнер.
+          Какой-то смысловой нагрузки тут уже не планируется, так что я бы, на Вашем месте, пропустил эту
+          часть. <br> <br>
+          Казалось бы: а почему не использовать текст-рыбу? Да, вот как-то без души это всё, а мы же тут за
+          идею, так что нам такое не подходит. <br> <br>
+          А вот ещё момент: женщина на картинке-то - сгенерированная! Как и все изображения на этой странице.
+          С идеей макета мне тоже чуть помог <br class="adaptive"> ИИ из Figma, хотя и остальное пришлось самому додумывать.
+          <br>
+          <br>
+          Знали бы вы сколько уже было тэгов "br" потрачено... Ну ничего, мы уже на финишной прямой. Ещё
+          одно
+          предложение и можно заканчивать. Вот и оно, последнее предложение, спасибо, что прочитали до
+          конца))
 
 
-                  <a href="https://wa.me/70000000000" target="_blank">
-                    <img src="./img/WA-icon2.svg" alt="WhatsApp" class="messenger">
-                  </a>
+        </p>
+        <img src="/img/pekar.jfif" alt="Ненастоящая женщина" class="pekar" title="Сгенерированная женщина"
+          loading="lazy">
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <h2 class="section-title contacts-title">Контакты</h2>
+      <div class="contacts-wrapper">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A2c562434b89716c63431ddd4c2b9f01e7aa2721a3ebe0d939b475ffa1a828fc5&amp;source=constructor"
+          width="650" height="400" frameborder="0" class="map"></iframe>
+        <div class="contacts-text-wrapper">
+          <p class="contacts-text">Теоритически мы распологаемся по адресу <adress> г. Краснодар, х. Ленина,
+              <br> ул. Булочная
+            </adress>
+            (да, из-за улицы). Забрать свой заказ по этому адресу можно <br> в течении часа (или позже)
+            после его
+            оформления на данном
+            сайте
+            <br> или по указанному телефону <a href="tel:+70000000000">+7 (000) 000-00-00</a>. Пекарня
+            работает
+            каждый день <time datetime="08:00/22:00">с 8:00 до 22:00</time>, приезжайте в
+            любое
+            удобное для Вас время!
+          </p>
+          <p class="contacts-text"> На территории пекарни также располагается небольшая столовая и магазин -
+            Вы всегда можете
+            перекусить тёпленькими вкуснейшими пирожками у нас в гостях.
+            И не забывайте обязательно заходить к нам <br> в вечернее время, так как каждый день после <time
+              datetime="20:00/22:00">20:00 часов</time>
+            действует скидка на оставшиеся пирожки 30%! </p>
+          <p class="contacts-text">С нетерпением ждём Вас в нашей "Пирожковой"!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <adress> г. Краснодар, х. Ленина, ул. Булочная </adress>
+      <a href="mailto:pirozhki.na.bulochnoy@mail.ru">pirozhki.na.bulochnoy@mail.ru</a>
+      <p>Ежедневно <time datetime="08:00/22:00">с 8:00 до 22:00</time></p>
+      <div class="messengers">
+        <a href="https://t.me/youraccountname" target="_blank">
+          <img src="./img/telegram-icon.svg" alt="Telegram" class="messenger">
+        </a>
 
 
-                  <a href="https://vk.me/youraccountname" target="_blank">
-                    <img src="./img/vk-icon.svg" alt="Вконтакте" class="messenger">
-                  </a>
-                </div>
+        <a href="https://wa.me/70000000000" target="_blank">
+          <img src="./img/WA-icon2.svg" alt="WhatsApp" class="messenger">
+        </a>
 
-                <p>Телефон отдела продаж:
 
-                  <a href="tel:+70000000000">+7 (000) 000-00-00</a>
-                </p>
+        <a href="https://vk.me/youraccountname" target="_blank">
+          <img src="./img/vk-icon.svg" alt="Вконтакте" class="messenger">
+        </a>
+      </div>
 
-              </footer>
+      <p>Телефон отдела продаж:
+
+        <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+      </p>
+    </div>
+  </footer>
 </body>
 
 </html>

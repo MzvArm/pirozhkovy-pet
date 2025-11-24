@@ -49,8 +49,8 @@ window.addEventListener("click", function (event) {
 
             const orderItemHTML = `<div class="order-item" data-id="${productInfo.id}">
             <div class="order-item-description">
-            <div class="order-item-img">
-              <img src=${productInfo.imgSrc} width="40" alt="">
+            <div>
+              <img class="small-item-img" src=${productInfo.imgSrc} width="40" alt="">
             </div>
             <div class="order-item-title">${productInfo.title}</div>
             <div class="order-item-info">${productInfo.weight} / ${productInfo.calories}</div>

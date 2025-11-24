@@ -18,7 +18,7 @@ productForCalc.forEach(function (item) {
     const calcItemHTML = `<div class="calc-item">
             <div class="calc-item-description">
             <div class="calc-item-img">
-              <img src=${productInfo.imgSrc} width="40" alt="">
+              <img src=${productInfo.imgSrc} width="40" alt="" class="small-item-img">
             </div>
             <div class="calc-item-title">${productInfo.title}</div>
             <div class="calc-item-info">
