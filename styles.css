@@ -73,7 +73,7 @@
 
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -166,8 +166,6 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
@@ -204,7 +202,6 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
     content: none;
 }
 
@@ -371,6 +368,7 @@ input[type="search"]:focus {
     height: 50px;
     background-color: #ffaa0c;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .modal {
@@ -420,7 +418,6 @@ input[type="search"]:focus {
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: transparent;
     padding: 5px;
     border-radius: 50%;
     border: none;
@@ -850,9 +847,8 @@ input[type="search"]:focus {
 }
 
 .contacts {
-    padding: 60px 30px 20px;
     scroll-margin-top: 70px;
-    padding-bottom: 40px;
+    padding: 60px 30px 40px;
 }
 
 .contacts-title {

@@ -36,10 +36,10 @@ window.addEventListener("click", function (event) {
         if (itemInBasket) {
             const counterInBasket = itemInBasket.querySelector("[data-counter]");
             counterInBasket.textContent = parseInt(counterInBasket.textContent) + parseInt(productInfo.counter);
-       
+
             // Если счётчик == 0 - не добавляем в корзину
-       
-        } else if (productInfo.counter == 0){
+
+        } else if (productInfo.counter === 0){
 
         }
         else {
